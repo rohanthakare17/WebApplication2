@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Submit Data";
+}
+
+<h2>Submit Data</h2>
+
+@using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.TextBox("textEntry", "", new { placeholder = "Enter text here" })
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+}
+
+@if (ViewBag.Message != null)
+{
+    <div>
+        <strong>@ViewBag.Message</strong>
+    </div>
+}
+
+<a href="@Url.Action("ViewEntries", "Home")">View Data</a>

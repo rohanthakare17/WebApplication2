@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WebApplication2.Models.MyData>
+@{
+    ViewBag.Title = "View Entries";
+}
+
+<h2>Inserted Entries</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var entry in Model)
+        {
+            <tr>
+                <td>@entry.Id</td>
+                <td>@entry.Data</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
